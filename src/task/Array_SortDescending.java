@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class Array_SortDescending {
     public static void main(String[] args) {
-        int[] nums = {10,5,-2,17,0};
+        //int[] nums = {10,5,-2,17,0};
+        int[] nums = {1,0,2,0,3,0,4,0};
         System.out.println("unsorted array is "+ Arrays.toString(nums));
         System.out.println("sorted array is   " + Arrays.toString(sortD(nums)));
 
