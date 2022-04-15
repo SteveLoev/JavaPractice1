@@ -1,5 +1,5 @@
 package task;
-import utilities.ArraysUtility;
+
 
 import java.util.Arrays;
 
@@ -16,15 +16,24 @@ public class Concat_Arrays {
     }
 
     public static int[] merge(int[] arr1, int[] arr2){
-        //implement using addElements method
-        int[] result = {};
 
-        //will go thru each array separately and add items to the new array, in order
+        //create a new temp array of the combined sizes of the passed arrays
+        int[] result = new int[arr1.length + arr2.length];
+
+        /**
+         *         going to loop thru both arrays in succession so we need a counter value
+         *         that we can use going from first array to the second one
+         */
+        int i = 0;
+
+        //add elements from the first array to our new array
         for (int each : arr1) {
-            result = ArraysUtility.addElement(result,each);
+            result[i++] = each;
         }
+
+        //now add elements from the second array to our new array, using persistent index of i
         for (int each : arr2) {
-            result = ArraysUtility.addElement(result,each);
+            result[i++] = each;
         }
         return result;
 
