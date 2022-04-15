@@ -3,5 +3,5 @@
 /.idea/
 /out/
 /*.iml
-/src/task/_done/
+#/src/task/_done/
 /src/interview/
