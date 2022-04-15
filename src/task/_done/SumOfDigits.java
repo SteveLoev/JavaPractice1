@@ -1,4 +1,4 @@
-package task;
+package task._done;
 
 public class SumOfDigits {
 
