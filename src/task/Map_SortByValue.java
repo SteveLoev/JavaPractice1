@@ -6,7 +6,7 @@ public class Map_SortByValue {
 
     public static void main(String[] args) {
 
-        //create our data structure
+        //create our data structure (word counts in imaginary web site)
         Map<String, Integer> wordCounts = new HashMap<>();
         wordCounts.put("USA", 100);
         wordCounts.put("jobs", 200);
