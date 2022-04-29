@@ -19,7 +19,7 @@ public class Map_SortByValue {
     }
     public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
 
-        //create list of map entries
+        //create list of map entries so we can call sort method on it
         /**
          * A map entry (key-value pair). The Map.entrySet method returns a collection-view of the map
          */
