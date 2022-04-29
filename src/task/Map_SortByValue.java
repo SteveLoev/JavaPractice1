@@ -26,7 +26,11 @@ public class Map_SortByValue {
         List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());//get key/value of map
 
         /**
-         * Returns a comparator that compares Map.Entry in natural order on value.
+         * Returns a comparator.
+         * A comparator interface is used to order the objects of user-defined classes.
+         * A comparator object is capable of comparing two objects of the same class
+         * that compares Map.Entry in natural order on value.
+         *
          * The returned comparator is serializable and throws NullPointerException
          * when comparing an entry with null values.
          */
@@ -35,7 +39,7 @@ public class Map_SortByValue {
         //reassign passed param to an empty map
         map = new LinkedHashMap<>();
 
-
+        //now populate this empty map with key/value pairs from the list we created above
         for (Map.Entry<String, Integer> each : list) {
             map.put(each.getKey(), each.getValue());
         }
