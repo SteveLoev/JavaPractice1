@@ -24,7 +24,7 @@ public class Map_SortByValue {
          * A map entry (key-value pair). The Map.entrySet method returns a collection-view of the map
          */
         List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());//get key/value of map
-
+//LIST OF ARRAYS
         /**
          * Returns a comparator.
          * A comparator interface is used to order the objects of user-defined classes.
