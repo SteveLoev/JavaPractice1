@@ -58,7 +58,7 @@ public class Map_SortByValue {
 
     /**
      * TREE MAP WILL SORT KEYS, NOT VALUES!
-     * CAPITAL LETTERS will go before lowercase
+     * case-sensitive
      * @param map
      * @return
      */
@@ -69,8 +69,12 @@ public class Map_SortByValue {
         List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());//get key/value of map
 //LIST OF ARRAYS
 
-        Map map2 = new TreeMap<>();
+        //Map map2 = new TreeMap<>();
 
+        /**
+         * to make sort on keys case-insensitive
+         */
+        Map<String, Integer> map2 = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         for (Map.Entry<String, Integer> each : list) {
             map2.put(each.getKey(), each.getValue());
         }
