@@ -53,6 +53,7 @@ public class Map_SortByValue {
 
     public static Map<String, Integer> sortWithTree(Map<String, Integer> map){
 
+        //cannot traverse map with a for so need to drop it into a list
         List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());//get key/value of map
 //LIST OF ARRAYS
 
