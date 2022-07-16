@@ -14,8 +14,11 @@ public class Map_SortByValue {
         wordCounts.put("technology", 70);
         wordCounts.put("opportunity", 200);
 
-        System.out.println(sortByValue(wordCounts));
-
+        //System.out.println(sortByValue(wordCounts));
+        System.out.println(sortWithTree(wordCounts));
+        /**
+         * returns {USA=100, jobs=200, opportunity=200, software=50, technology=70}
+         */
     }
     public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
 
@@ -37,14 +40,28 @@ public class Map_SortByValue {
         list.sort(Map.Entry.comparingByValue());
 
         //reassign passed param to an empty map
-        map = new LinkedHashMap<>();
+        Map map1 = new LinkedHashMap<>();
 
         //now populate this empty map with key/value pairs from the list we created above
         for (Map.Entry<String, Integer> each : list) {
-            map.put(each.getKey(), each.getValue());
+            map1.put(each.getKey(), each.getValue());
         }
 
-        return map;
+        return map1;
+
+    }
+
+    public static Map<String, Integer> sortWithTree(Map<String, Integer> map){
+
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());//get key/value of map
+//LIST OF ARRAYS
+
+        Map map2 = new TreeMap<>();
+
+        for (Map.Entry<String, Integer> each : list) {
+            map2.put(each.getKey(), each.getValue());
+        }
+        return map2;
 
     }
 }
