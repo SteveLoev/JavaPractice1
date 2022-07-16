@@ -11,10 +11,15 @@ public class Map_SortByValue {
         wordCounts.put("USA", 100);
         wordCounts.put("jobs", 200);
         wordCounts.put("software", 50);
+        wordCounts.put("A",100500);
         wordCounts.put("technology", 70);
         wordCounts.put("opportunity", 200);
 
+        /**
+         * RETURNS {software=50, technology=70, USA=100, jobs=200, opportunity=200, A=100500}
+         */
         //System.out.println(sortByValue(wordCounts));
+
         System.out.println(sortWithTree(wordCounts));
         /**
          * returns {USA=100, jobs=200, opportunity=200, software=50, technology=70}
@@ -50,6 +55,13 @@ public class Map_SortByValue {
         return map1;
 
     }
+
+    /**
+     * TREE MAP WILL SORT KEYS, NOT VALUES!
+     * CAPITAL LETTERS will go before lowercase
+     * @param map
+     * @return
+     */
 
     public static Map<String, Integer> sortWithTree(Map<String, Integer> map){
 
