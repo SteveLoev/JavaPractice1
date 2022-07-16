@@ -15,15 +15,18 @@ public class Map_SortByValue {
         wordCounts.put("technology", 70);
         wordCounts.put("opportunity", 200);
 
-        /**
+        /** SORTED ON VALUES
          * RETURNS {software=50, technology=70, USA=100, jobs=200, opportunity=200, A=100500}
          */
         //System.out.println(sortByValue(wordCounts));
 
-        System.out.println(sortWithTree(wordCounts));
-        /**
-         * returns {USA=100, jobs=200, opportunity=200, software=50, technology=70}
+
+        /** SORTED ON KEYS
+         * returns {A=100500, jobs=200, opportunity=200, software=50, technology=70, USA=100}
+         * with new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
          */
+        System.out.println(sortWithTree(wordCounts));
+
     }
     public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
 
